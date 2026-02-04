@@ -9,12 +9,17 @@ Automated ML pipeline using Airflow to perform K-means clustering on the Wine da
 echo "AIRFLOW_UID=$(id -u)" > .env
 ```
 
-2. Start containers:
+2. Initialize Airflow DB
+```bash
+docker compose up airflow-init
+```
+
+3. Start containers:
 ```bash
 docker-compose up -d
 ```
 
-3. Wait for services to be healthy:
+4. Wait for services to be healthy:
 ```bash
 docker-compose ps
 ```
